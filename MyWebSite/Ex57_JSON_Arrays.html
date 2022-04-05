@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        let array = ["포도", "사과"]    // let object = {}
+        document.write(array.toString() + "<br>");     // 재정의 (배열값 출력)
+        document.write(array);  // default toString()
+        document.write("<br>");
+
+        for (let i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br>");
+        }
+        document.write("<br>");
+        for (let index in array) {
+            document.write(array[index] + "<br>");
+        }
+
+        // 동적
+        array[2] = "바나나";   // 동적 데이터 추가 가능
+        document.write(array.toString() + "-" + array.length + "<br>");
+
+        // 권장하지 않아요 (가능은 해요)
+        array[10] = "애플망고";
+        document.write(array.toString() + "-" + array.length + "<br>");     // 포도,사과,바나나,,,,,,,,애플망고-11
+        document.write(array[9] + "<br>");  // undefined
+
+        array[9] = "배";
+        document.write(array.toString() + "-" + array.length + "<br>");     //포도,사과,바나나,,,,,,,배,애플망고-11
+        document.write(array[9] + "<br>"); //배
+
+
+        let array2 = ["one", "two", "three"];
+        // 권장하지 않아요
+        array2.length = 2;  // 강제로
+        document.write(array2.toString() + "-" + array2.length + "<br>");   //one,two-2
+
+
+        // 권장방법
+        // Array >> stack >> LIFO >> push(), pop()
+        let array3 = [];
+        array3.push(1);
+        array3.push(2);
+        document.write(array3.toString() + "-" + array3.length + "<br>");
+        document.write(array3.pop());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

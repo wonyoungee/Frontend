@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <label>User name <input type='text' id="text"></label>
+    <em class="message"></em>
+
+    <script>
+        // <input type='text'> 에 blur 이벤트 발생시
+        //이름 최소 길이 2자 이상 입력받으라는  메시지를    <em class="message"> 에  출력하세요
+        const MIN_USER_NAME_LENGTH = 2;
+        const input = document.querySelector('input[type=text]');
+        const msg = document.querySelector('.message');
+
+        document.getElementById("text").addEventListener("blur", function () {
+            if (input.value < 2) {
+                msg.innerHTML = "이름 최소 길이 2자 이상 입력하세요.";
+            }
+        });
+
+    </script>
+</body>
+</html>
