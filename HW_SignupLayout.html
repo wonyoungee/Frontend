@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #35c5f0;
+            padding: 50px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 20%;
+            height: 700px; /* only for demonstration, should be removed */
+            background-color: black;
+            padding: 20px;
+        }
+
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+        li a {
+            display: block;
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            li a:hover {
+                background-color: #35c5f0;
+                color: black;
+            }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #f1f1f1;
+            height: 700px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+            color: dimgray;
+            height: 70px;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /*main*/
+
+        blockquote, body, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (min-width: 768px) {
+            .main {
+                width: 360px;
+            }
+        }
+
+        .main {
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        form {
+            display: block;
+        }
+
+        div {
+            display: block;
+        }
+
+        .css-1xdhyk6 {
+            margin: 50px 0 20px 0;
+        }
+
+        .css-ef7ez6 {
+            display: block;
+            margin: 0 0 12px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #292929;
+            line-height: 21px;
+            word-break: keep-all;
+        }
+
+        label {
+            cursor: default;
+        }
+
+        .email-input {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .form-check-group, .form-control, .form-radio-group, .input-group {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 auto;
+            -moz-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+
+        .email-input__domain, .email-input__local {
+            position: relative;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 0px;
+            -moz-box-flex: 1;
+            -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+        }
+
+        .css-1eufcdp .form-control {
+            font-size: 15px;
+        }
+
+        .email-input__domain > .form-control, .email-input__local > .form-control {
+            width: 100%;
+        }
+
+        .form-control {
+            transition: border-color .2s,box-shadow .2s,background-color .2s;
+            display: block;
+            box-sizing: border-box;
+            height: 40px;
+            width: 100%;
+            padding: 0 15px;
+            line-height: 40px;
+            border-radius: 4px;
+            border: 1px solid #dbdbdb;
+            background-color: #fff;
+            color: #424242;
+            font-size: 12px;
+        }
+
+
+        element.style {
+        }
+
+        .css-1eufcdp .form-control {
+            font-size: 15px;
+        }
+
+        .email-input__domain > .form-control, .email-input__local > .form-control {
+            width: 100%;
+        }
+
+        .input-group .form-control {
+            width: 0;
+        }
+
+        @media (min-width: 768px) {
+            form-control {
+                font-size: 14px;
+            }
+        }
+
+        .form-control {
+            transition: border-color .2s,box-shadow .2s,background-color .2s;
+            display: block;
+            box-sizing: border-box;
+            height: 40px;
+            width: 100%;
+            padding: 0 15px;
+            line-height: 40px;
+            border-radius: 4px;
+            border: 1px solid #dbdbdb;
+            background-color: #fff;
+            color: #424242;
+            font-size: 12px;
+        }
+
+        .form-check-group, .form-control, .form-radio-group, .input-group {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 auto;
+            -moz-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+
+        input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        input {
+            writing-mode: horizontal-tb !important;
+            font-style:;
+            font-variant-ligatures:;
+            font-variant-caps:;
+            font-variant-numeric:;
+            font-variant-east-asian:;
+            font-weight:;
+            font-stretch:;
+            font-size:;
+            font-family:;
+            text-rendering: auto;
+            letter-spacing: normal;
+            word-spacing: normal;
+            line-height: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            appearance: auto;
+            cursor: text;
+            margin: 0em;
+            padding: 1px 2px;
+            border-width: 2px;
+            border-style: inset;
+            border-image: initial;
+        }
+
+        .email-input__separator {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 20px;
+            -moz-box-flex: 0;
+            -ms-flex: 0 0 20px;
+            flex: 0 0 20px;
+            text-align: center;
+            line-height: 40px;
+            color: #dbdbdb;
+        }
+
+        @media (min-width: 768px) {
+            body, html {
+                font-size: 15px;
+            }
+        }
+
+        .email-input__domain, .email-input__local {
+            position: relative;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 0px;
+            -moz-box-flex: 1;
+            -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+        }
+
+        .css-1eufcdp .form-control {
+            font-size: 15px;
+        }
+
+        .email-input__domain > .form-control, .email-input__local > .form-control {
+            width: 100%;
+        }
+
+        .email-input__domain > input, .email-input__domain > select {
+            padding-right: 30px;
+        }
+
+        button, input, select, textarea {
+            font-size: inherit;
+        }
+
+        select {
+            -moz-appearance: none;
+        }
+
+        button, input[type=email], input[type=file], input[type=number], input[type=password], input[type=submit], input[type=tel], input[type=text], option, select, textarea {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+        }
+
+            select:not(:-internal-list-box) {
+                overflow: visible !important;
+            }
+
+        select {
+            writing-mode: horizontal-tb !important;
+            font-style:;
+            font-variant-ligatures:;
+            font-variant-caps:;
+            font-variant-numeric:;
+            font-variant-east-asian:;
+            font-weight:;
+            font-stretch:;
+            font-size:;
+            font-family:;
+            text-rendering: auto;
+            color: -internal-light-dark(black, white);
+            letter-spacing: normal;
+            word-spacing: normal;
+            line-height: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            appearance: auto;
+            box-sizing: border-box;
+            align-items: center;
+            white-space: pre;
+            -webkit-rtl-ordering: logical;
+            background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+            cursor: default;
+            margin: 0em;
+            border-width: 1px;
+            border-style: solid;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+            border-radius: 0px;
+        }
+
+        .email-input__domain > .form-control > option, .email-input__local > .form-control > option {
+            color: #424242;
+        }
+
+        option:disabled {
+            color: rgb(170,170,170);
+        }
+
+        option {
+            font-weight: normal;
+            display: block;
+            white-space: nowrap;
+            min-height: 1.2em;
+            padding: 0px 2px 1px;
+        }
+
+        .email-input__domain__expand {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px;
+            background: none;
+            border: none;
+            font-size: 0;
+            cursor: default;
+            color: rgba(0,0,0,.3);
+        }
+
+        [role=button], a, button, input[type=button], input[type=reset], input[type=submit] {
+            cursor: pointer;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+        }
+
+        button {
+            appearance: auto;
+            writing-mode: horizontal-tb !important;
+            font-style:;
+            font-variant-ligatures:;
+            font-variant-caps:;
+            font-variant-numeric:;
+            font-variant-east-asian:;
+            font-weight:;
+            font-stretch:;
+            font-size:;
+            font-family:;
+            text-rendering: auto;
+            color: -internal-light-dark(black, white);
+            letter-spacing: normal;
+            word-spacing: normal;
+            line-height: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: center;
+            align-items: flex-start;
+            cursor: default;
+            box-sizing: border-box;
+            background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+            margin: 0em;
+            padding: 1px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+        }
+
+        .css-1kfo0kb {
+            margin-bottom: 30px;
+        }
+
+        .css-ef7ez6 {
+            display: block;
+            margin: 0 0 12px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #292929;
+            line-height: 21px;
+            word-break: keep-all;
+        }
+
+        .css-1npk207 {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #757575;
+            line-height: 1.4;
+        }
+
+        ._1qwAY {
+            padding: 8px 15px 9px;
+        }
+
+        ._3ASDR {
+            display: inline-block;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", "Noto Sans CJK KR", "맑은 고딕", "Malgun Gothic", sans-serif;
+            font-size: 15px;
+            line-height: 21px;
+            resize: none;
+            appearance: none;
+            margin: 0px;
+            padding: 8px 15px 9px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(219, 219, 219);
+            border-image: initial;
+            border-radius: 4px;
+            transition: border-color 0.1s ease 0s, background-color 0.1s ease 0s;
+        }
+
+        .css-1d3w5wq {
+            width: 100%;
+        }
+
+        ._2tsrJ, ._3VkGp {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        ._2tsrJ {
+            padding: 11px 10px;
+        }
+
+        ._3AsCW {
+            background-color: #35c5f0;
+            border-color: #35c5f0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Ecount 2조</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <div class="main">
+                <h1>회원가입</h1>
+                <form>
+                    <!--이메일-->
+                    <div class="css-1xdhyk6 euhjq6q3">
+                        <label class="css-ef7ez6 euhjq6q2">이메일</label>
+                        <div class="css-1eufcdp e159epbo1">
+                            <div class="input-group email-input">
+                                <span class="email-input__local">
+                                    <input class="form-control" placeholder="이메일" size="1" value="">
+                                </span>
+                                <span class="email-input__separator">@</span>
+                                <span class="email-input__domain">
+                                    <select class="form-control empty">
+                                        <option value>선택해주세요</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                        <option value="outlook.com">outlook.com</option>
+                                        <option value="icloud.com">icloud.com</option>
+                                        <option value="_manual">직접입력</option>
+                                    </select>
+                                    <button class="email-input__domain__expand" aria-label="초기화" type="button" tabindex="-1">
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--비밀번호-->
+                    <div class="css-1kfo0kb euhjq6q3">
+                        <label class="css-ef7ez6 euhjq6q2">비밀번호</label>
+                        <div class="css-1npk207 euhjq6q1">영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</div>
+                        <input type="password" class="_3ASDR _1qwAY" value="" field="[object Object]" name="password" placeholder="비밀번호">
+                    </div>
+
+                    <!--비밀번호 확인-->
+                    <div class="css-1kfo0kb euhjq6q3">
+                        <label class="css-ef7ez6 euhjq6q2">비밀번호 확인</label>
+                        <input type="password" class="_3ASDR _1qwAY" value="" field="[object Object]" name="confirmPassword" placeholder="비밀번호 확인">
+                    </div>
+
+                    <!--회원가입하기 버튼-->
+                    <button class="_3Z6oR _3AsCW _2tsrJ css-1d3w5wq e1y3odo22" type="submit">회원가입하기</button>
+                </form>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p><br />
+        <h6>2조_유원영_이경익_이정우</h6>
+    </footer>
+</body>
+</html>

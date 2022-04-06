@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*
+         * onload 이벤트가 발생하는 시점 : body 태그 안에 모든 요소가 웹 브라우저에 DOM 객체 형태로 로딩되고 난 후
+         * function loadCall(){}
+         * 1. <body onload="loadCall()">    권장하지 않아요..  >>  디자인과 협업 힘들어짐    >>  유지보수 힘듦
+         * 2. window.onload = loadCall();   >> 권장하는 방법
+         * 
+         * loadCall()은 다른 곳에서 재사용 X, load에서만 한번만 사용
+         * 고민) 재사용 안 할건데 함수 왜 필요..? 일회성으로 익명함수 쓰는 것이 좋지 않나?
+         * 
+         */
+
+        window.onload = function () {   // loading후 자동 호출되는 함수, 익명함수 - callback함수
+            // 보장 : body안에 모든 요소는 DOM객체 메모리에 존재한다 ..
+            let out = "";
+            out += "<ul>";
+                out += "<li>javascript</li>";
+                out += "<li>jquery</li>";
+                out += "<li>vue</li>";
+            out += "<ul>";
+            document.body.innerHTML = out;
+
+            // DOM >> 동적 >> 기존에 없던 (element 등) 추가, 삭제, 변경
+            let header = document.createElement("h1");  // <h1></h1>
+            let textnode = document.createTextNode("hello") // hello
+
+            header.appendChild(textnode);   // <h1>hello</h1>
+            document.body.appendChild(header);
+
+            // img 태그를 동적 생성하고 src 속성도 추가 후 body 자식요소로 append
+            let tag = document.createElement("img");
+            tag.src = "images/cat.PNG";
+            tag.width = "200";
+            document.body.appendChild(tag);
+        }
+    </script>
+</head>
+<body>
+    Hello World
+</body>
+</html>
